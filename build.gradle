@@ -2,6 +2,7 @@ plugins {
 	id 'java'
 	id 'org.springframework.boot' version '3.1.1'
 	id 'io.spring.dependency-management' version '1.1.0'
+	id 'groovy'
 }
 
 group = 'com.springtest'
@@ -40,8 +41,10 @@ dependencies {
 	testImplementation group: 'org.spockframework', name: 'spock-spring', version: '2.3-groovy-4.0'
 
 	// https://mvnrepository.com/artifact/org.spockframework/spock-bom
-	implementation group: 'org.spockframework', name: 'spock-bom', version: '2.3-groovy-4.0', ext: 'pom'
+	testImplementation group: 'org.spockframework', name: 'spock-bom', version: '2.3-groovy-4.0', ext: 'pom'
 
+	// https://mvnrepository.com/artifact/org.codehaus.groovy/groovy-all
+	testImplementation group: 'org.codehaus.groovy', name: 'groovy-all', version: '3.0.18', ext: 'pom'
 
 }
 
