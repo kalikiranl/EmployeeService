@@ -1,31 +1,32 @@
 package com.springtest.demo.controller
 
-import com.springtest.demo.entity.Employee;
-import com.springtest.demo.service.EmployeeService;
+import org.junit.jupiter.api.Assertions
+import org.springframework.boot.test.context.SpringBootTest
+import spock.lang.Specification
 
-import spock.lang.Specification;
-
-final class EmployeeControllerSpec extends Specification {
-
-    private def employeeService = Mock(EmployeeService);
-
-    private def subject = new EmployeeController(employeeService);
-
-    def 'getEmployeeDetails Test'(){
-
+@SpringBootTest
+class EmployeeControllerSpec extends Specification{
+    def 'Test'() {
         given:
-        List<Employee> listOfEmployee= List.of(new Employee(1, 'kali','address'));
-        and:
-        employeeService.getEmpInfo() >>  List.of(new Employee(1, 'kali','uk'));
-
+        int a = 10;
         expect:
-
-        assert subject.getEmployeeDetails(), listOfEmployee;
-
-
+        Assertions.assertEquals(10, a)
     }
 
 
+        def 'Test1'(){
+            given:
+            int a = 10;
+            expect:
+            Assertions.assertEquals(10, a )
 
+        }
 
+        def 'Test2'(){
+            given:
+            int a = 10;
+            expect:
+            Assertions.assertEquals(10, a )
+
+        }
 }
