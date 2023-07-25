@@ -26,7 +26,7 @@ class EmployeeControllerSpec extends Specification{
             given:
             int a = 10;
             expect:
-            Assertions.assertEquals(10, a )
+            Assertions.assertEquals(20, a )
 
         }
 }
